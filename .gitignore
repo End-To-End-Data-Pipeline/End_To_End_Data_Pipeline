@@ -1,0 +1,47 @@
+# ---------------------------------------------------
+# 2. Logs 
+# ---------------------------------------------------
+logs/
+Docker/logs/
+Docker/dbt/logs/
+Docker/dbt/payment_dwh/logs/
+*.log
+
+# ---------------------------------------------------
+# 3. Data Files (البيانات الخام)
+# ---------------------------------------------------
+*.parquet
+*.csv
+data.parquet
+
+# ---------------------------------------------------
+# 4. Python & Jupyter (ملفات بايثون المؤقتة)
+# ---------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------
+# 5. dbt (Data Build Tool)
+# ---------------------------------------------------
+target/
+Docker/dbt/payment_dwh/target/
+dbt_packages/
+Docker/dbt/payment_dwh/dbt_packages/
+
+# ---------------------------------------------------
+# 6. OS Generated Files
+# ---------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

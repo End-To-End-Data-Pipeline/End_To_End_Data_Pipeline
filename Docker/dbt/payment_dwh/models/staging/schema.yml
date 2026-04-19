@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_clients
+    description: "بيانات العملاء بعد التنظيف وتحويل حالات النشاط"
+    columns:
+      - name: client_id
+        description: "المعرف الفريد للعميل"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_transactions
+    description: "بيانات العمليات المالية مع توحيد صيغ الوقت"
+    columns:
+      - name: transaction_id
+        description: "المعرف الفريد للعملية"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_countries
+    description: "قائمة الدول والعملات المحلية"
+    columns:
+      - name: country_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_transaction_statuses
+    description: "المسميات التوضيحية لحالات العمليات"
+    columns:
+      - name: status_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_transaction_types
+    description: "أنواع العمليات وتصنيفها (خصم/إيداع)"
+    columns:
+      - name: type_id
+        tests:
+          - unique
+          - not_null

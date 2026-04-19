@@ -1,0 +1,2 @@
+FROM apache/airflow:2.9.3
+RUN pip install --no-cache-dir dbt-postgres==1.7.0 minio pandas pyarrow sqlalchemy psycopg2-binary
