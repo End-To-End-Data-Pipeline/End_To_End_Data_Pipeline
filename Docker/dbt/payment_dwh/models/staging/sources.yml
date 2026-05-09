@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: public
+    database: dwh
+    schema: public
+    tables:
+      - name: clients
+      - name: transactions
+      - name: countries
+      - name: transaction_statuses
+      - name: transaction_types
+      - name: merchants

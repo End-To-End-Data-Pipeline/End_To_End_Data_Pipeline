@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fact_transactions
+    description: "الجدول الرئيسي للعمليات بعد التنظيف"
+    columns:
+      - name: amount
+        description: "قيمة العملية (تم تحويلها لقيمة موجبة دائماً)"
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+      - name: currency
+        description: "العملة موحدة بصيغة UPPER case"
